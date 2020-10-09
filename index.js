@@ -124,7 +124,7 @@ client.on('message', message => {
 client.login('NzYzOTQzNTk4NDc0Nzg4ODk1.X3_D6w.BqyxK3ReBvqo-BxvdX18s0OE1Eg');
 
 const app = express()
-const port = 3000
+const PORT = process.env.PORT || 5000
 
 app.get('/', (req, res) => {
     res.send('Esta es la app de MAEs donde se hostea el bot de discord')
