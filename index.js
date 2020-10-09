@@ -1,4 +1,7 @@
 const Discord = require('discord.js');
+const express = require('express');
+
+
 
 // Create an instance of a Discord client
 const client = new Discord.Client();
@@ -119,3 +122,8 @@ client.on('message', message => {
 
 // Log our bot in using the token from https://discord.com/developers/applications
 client.login('NzYzOTQzNTk4NDc0Nzg4ODk1.X3_D6w.BqyxK3ReBvqo-BxvdX18s0OE1Eg');
+
+
+express()
+    .get('/', (req, res) => res.send('Este es el bot de MAEs')
+    .listen(5000, () => console.log(`Listening on ${ 5000 }`))
